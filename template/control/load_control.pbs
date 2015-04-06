@@ -1,0 +1,14 @@
+#!/bin/bash                             
+#PBS -l nodes=1:ppn=4,mem=15gb,walltime=24:00:00
+#PBS -m abe
+#PBS -M sample_email@umn.edu
+
+pwd=control_path
+script_path=scripts_location
+
+cd $pwd
+
+module load R
+
+echo "Run load_control_name_tso.sql"
+mysql -h mysql_host -u mysql_username -pmysql_passwd mysql_db < load_control.sql
