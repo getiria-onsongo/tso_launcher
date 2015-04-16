@@ -1,1 +1,3 @@
 tso_tables/*.sql
+.DS_Store
+*~
